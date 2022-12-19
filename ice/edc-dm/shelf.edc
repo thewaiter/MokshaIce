@@ -19,7 +19,7 @@ group { name: "e/shelf/default/base"; nomouse;
    images.image: "holes_horiz.png" COMP;
    images.image: "shine.png" COMP;
    parts {
-      rect { "mouse"; mouse;
+      rect { "mouse"; nomouse;
          desc { color: 0 0 0 0; }
       }
       part { name: "bg";
