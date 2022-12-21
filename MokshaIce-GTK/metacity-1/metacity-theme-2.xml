@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <metacity_theme>
 <info>
-	<name>oomox-MokshaDetour</name>
+	<name>oomox-Bodhi_Ice</name>
 	<author>Satyajit Sahoo</author>
 	<copyright>GPL-3.0+</copyright>
 	<date>11 December 2013</date>
@@ -9,16 +9,16 @@
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar_focused" value="#d2d1d2" />
-<constant name="C_titlebar_unfocused" value="#d2d1d2" />
-<constant name="C_border_focused" value="#bfbfbf" />
-<constant name="C_border_unfocused" value="#3c3c3c" />
-<constant name="C_title_focused" value="#1a1a1a" />
-<constant name="C_title_unfocused" value="blend/#101010/#d2d1d2/0.4" />
-<constant name="C_icons_focused" value="#1a1a1a" />
+<constant name="C_titlebar_focused" value="#b5b5b5" />
+<constant name="C_titlebar_unfocused" value="#a7a7a7" />
+<constant name="C_border_focused" value="#b1ac9e" />
+<constant name="C_border_unfocused" value="#4d4d4d" />
+<constant name="C_title_focused" value="#1f1818" />
+<constant name="C_title_unfocused" value="blend/#1f1818/#a7a7a7/0.4" />
+<constant name="C_icons_focused" value="#1f1818" />
 <constant name="C_icons_focused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_focused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
-<constant name="C_icons_unfocused" value="blend/#101010/#d2d1d2/0.4" />
+<constant name="C_icons_unfocused" value="blend/#1f1818/#a7a7a7/0.4" />
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_unfocused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
 
