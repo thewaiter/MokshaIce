@@ -111,13 +111,13 @@ group { name: "e/shelf/default/base"; nomouse;
          }
       }
       part { name: "e.swallow.content"; type: SWALLOW; mouse;
-         desc {
+         desc { "default"
             rel.to: "sizer";
-            link.base: "e,state,visible" "e";
+            //~ link.base: "e,state,visible" "e";
          }
-         desc { "hidden"; hid;
+         desc { "vert";
             rel.to: "sizer";
-            link.base: "e,state,hidden" "e";
+            //~ link.base: "e,state,hidden" "e";
          }
       }
       part { name: "shine";
