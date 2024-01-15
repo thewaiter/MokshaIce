@@ -3,7 +3,8 @@ images.image: "systray_expand_vert.png" COMP;
 
 group { name: "e/modules/systray/main";
    alias: "e/modules/systray/main/default";
-   alias: "e/modules/systray/main/invisible";
+   alias: "e/modules/systray/main/alternate";
+   alias: "e/modules/systray/main/translucent";
    data.item: "default" "197 196 196";
    data.item: "inset" "197 196 196";
    data.item: "plain" "197 196 196";
@@ -184,4 +185,11 @@ group { name: "e/modules/systray/main";
          target: "expand_butt";
       }
    }
+}
+
+group { name: "e/modules/systray/main/translucent";
+   inherit: "e/modules/systray/main";
+   data.item: "default" "45 45 45";
+   data.item: "inset" "45 45 45";
+   data.item: "plain" "45 45 45";
 }
