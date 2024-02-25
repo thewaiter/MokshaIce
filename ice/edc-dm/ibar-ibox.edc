@@ -330,7 +330,7 @@ group { name: "e/modules/ibar/menu/item";
          }
       }
       part { name: "icon"; type: SPACER;
-         scale: 1
+         scale: 1;
          description { state: "default";
             rel1.offset: 2 2;
             rel2.offset: 2 -3;
