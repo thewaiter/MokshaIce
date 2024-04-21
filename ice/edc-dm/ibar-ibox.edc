@@ -508,7 +508,7 @@ group { name: "e/modules/ibar/menu/item";
 
 group { name: "e/modules/ibox/icon_overlay";
    alias: "e/modules/ibar/icon_overlay";
-   images.image: "darken_square.png" COMP;
+   images.image: "grey_glow.png" COMP;
    script_recursion: 1;
    script {
       public urgent;
@@ -591,7 +591,7 @@ group { name: "e/modules/ibox/icon_overlay";
             rel1.to: "e.text.label";
             rel2.offset: 8 4;
             rel2.to: "e.text.label";
-            image.normal: "darken_square.png";
+            image.normal: "grey_glow.png";
             image.border: 6 6 6 6;
             fill.smooth: 0;
             fixed: 1 1;
@@ -600,7 +600,7 @@ group { name: "e/modules/ibox/icon_overlay";
          }
          description { state: "visible" 0.0;
             inherit: "default" 0.0;
-            color: 255 255 255 255;
+            color: 255 255 255 225;
             visible: 1;
          }
       }
