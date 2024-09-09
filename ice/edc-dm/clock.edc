@@ -647,11 +647,6 @@ group { name: "e/modules/clock/main";
          }
    }
    parts {
-      //~ part { name: "event"; type: RECT;
-         //~ description { state: "default" 0.0;
-            //~ color: 0 0 0 0;
-         //~ }
-      //~ }
       part { name: "base";
          description { state: "default" 0.0;
             rel1.relative: (25/380) (25/380);
@@ -788,55 +783,60 @@ group { name: "e/modules/clock/main";
             image.normal: "knob";
          }
       }
+      part { name: "event"; type: RECT;
+         description { state: "default" 0.0;
+            color: 0 0 0 0;
+         }
+      }
    }
- programs {
-		program {
-			signal: "load"; source: "";
-			script {
-				clock_cb(0);
-			}
-		}
-		program {
-			signal: "e,state,seconds,on"; source: "e";
-			action: STATE_SET "default" 0.0;
-			target: "seconds";
-			target: "seconds-sh";
-			after: "sec2";
-		}
-		program { name: "sec2";
-			script {
-				new tim;
-            
-				set_int(do_seconds, 1);
-				tim = get_int(tick_timer);
-				if (tim) {
-					cancel_timer(tim);
-					set_int(tick_timer, 0);
-				}
-				clock_cb(0);
-			}
-		}
-		program {
-			signal: "e,state,seconds,off"; source: "e";
-			action: STATE_SET "hidden" 0.0;
-			target: "seconds";
-			target: "seconds-sh";
-			after: "sec3";
-		}
-		program { name: "sec3";
-			script {
-				new tim;
-            
-				set_int(do_seconds, 0);
-				tim = get_int(tick_timer);
-				if (tim) {
-					cancel_timer(tim);
-					set_int(tick_timer, 0);
-				}
-				clock_cb(0);
-			}
-		}
-	}
+  programs {
+    program {
+        signal: "load"; source: "";
+            script {
+               clock_cb(0);
+            }
+        }
+    program {
+        signal: "e,state,seconds,on"; source: "e";
+        action: STATE_SET "default" 0.0;
+        target: "seconds";
+        target: "seconds-sh";
+        after: "sec2";
+    }
+    program { name: "sec2";
+        script {
+            new tim;
+
+            set_int(do_seconds, 1);
+            tim = get_int(tick_timer);
+            if (tim) {
+                cancel_timer(tim);
+                set_int(tick_timer, 0);
+            }
+            clock_cb(0);
+        }
+    }
+    program {
+        signal: "e,state,seconds,off"; source: "e";
+        action: STATE_SET "hidden" 0.0;
+        target: "seconds";
+        target: "seconds-sh";
+        after: "sec3";
+    }
+    program { name: "sec3";
+        script {
+            new tim;
+
+            set_int(do_seconds, 0);
+            tim = get_int(tick_timer);
+            if (tim) {
+                cancel_timer(tim);
+                set_int(tick_timer, 0);
+            }
+            clock_cb(0);
+        }
+    }
+  }
 }
 
 group { name: "e/modules/clock/calendar/dayname";
@@ -932,7 +932,7 @@ group { name: "e/modules/clock/calendar/day";
             text.size: 7;
             text.align: 0.8 0.35;
             color: FN_COL_MID_GREY;
-         } 
+         }
       }
       part { name: "label2"; type: TEXT; mouse_events: 0;
          effect: GLOW;
@@ -974,7 +974,6 @@ group { name: "e/modules/clock/calendar/day";
             evalstate();
          }
       }
-
       program {
          signal: "e,state,today"; source: "e";
          script {
@@ -991,7 +990,6 @@ group { name: "e/modules/clock/calendar/day";
             evalstate();
          }
       }
-
       program {
          signal: "e,state,hidden"; source: "e";
          script {
@@ -1012,7 +1010,7 @@ group { name: "e/modules/clock/calendar/day";
          signal: "e,state,week"; source: "e";
          action: STATE_SET "weeknumb" 0.0;
          target: "e.text.label";
-      } 
+      }
    }
 }
 
