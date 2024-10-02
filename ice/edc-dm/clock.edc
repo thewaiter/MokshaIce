@@ -601,7 +601,7 @@ group { name: "e/modules/clock/main";
       //~ image { image: "knob_sz_04.png"  COMP; size:  0  0 12 12; }
    //~ }
    min: 16 16;
-   max: 166 166;
+   max: 160 160;
    script {
       public do_seconds, tick_timer;
 
@@ -649,8 +649,8 @@ group { name: "e/modules/clock/main";
    parts {
       part { name: "base";
          description { state: "default" 0.0;
-            rel1.relative: (25/380) (25/380);
-            rel2.relative: (365/380) (365/380);
+            //~ rel1.relative: (25/380) (25/380);
+            //~ rel2.relative: (365/380) (365/380);
             aspect: 1.0 1.0; aspect_preference: BOTH;
             image.normal: "clock_base.png";
          }
