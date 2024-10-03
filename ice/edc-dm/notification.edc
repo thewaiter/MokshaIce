@@ -142,6 +142,8 @@ group { name: "notification/main";
          description { state: "default" 0.0;
             image.normal: "darken_square.png";
             image.border: 6 6 6 6;
+            rel1.offset: -10 0;
+            rel2.offset:  10 0;
          }
       }
       part { name: "titleclip"; type: RECT;
